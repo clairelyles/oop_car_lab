@@ -58,12 +58,14 @@ Car.prototype.dropOff = function(name) {
 	index = this.passengers.indexOf(name);
 	if (index != -1 && this.running) {
 		this.passengers.splice(index, 1);
+		console.log("driving to drop off " + name)
 		return true;
 	}
 	return false;
 }
 
 Car.prototype.passengerCount = function() {
+
 	return this.passengers.length;
 }
 
